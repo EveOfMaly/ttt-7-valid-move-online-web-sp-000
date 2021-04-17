@@ -3,14 +3,8 @@
 #code your #valid_move? method here
 #valid move is when it is preent on the  game board.
 
-def valid_move?(board, index)
-  if index.between?(0,8) == true && position_taken?(board,index) == false 
-    return true
-   elsif index.between?(0,8) == true && position_taken?(board,index) == nil
-    return true 
-  else
-    return false
-  end
+def valid_move?(board,index) 
+  index.between?(0,8) && !position_taken?(board,index)
 end
     
 
